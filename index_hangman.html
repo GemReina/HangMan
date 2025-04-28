@@ -1,0 +1,55 @@
+<!--Gemma Reina & Federico Diaz-->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+  <!--Display Main Page-->
+  <div class="container" id="welcome-container">
+    <h1>Welcome to the Hangman Game!</h1>
+      <label for="playerName">What is your name?</label>
+      <input type="text" id="playerName" placeholder="Your Name">
+      <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div class="container" id="game-container" style="display: none;">
+    <!-- Display Player Information -->
+      <div id="playerInfo" style="display: none;">
+        <p id="playerNameDisplay"></p>
+        <p>Wins: <span id="winCount">0</span></p>
+        <p>Losses: <span id="lossCount">0</span></p>
+        <p>Used Letters: <span id="usedLetters"></span></p>
+      </div>
+
+      <div>
+        <!-- Hangman Image -->
+        <img id="hangman-img" height="270px" width="270px">
+      </div>
+
+      <div class="word-display">
+        <!-- Word Display -->
+      </div>
+
+      <div class="letters">
+        <!-- Letter Buttons -->
+        <h2>What letter are you going to try next?</h2>
+      </div>
+
+      <!-- Input for Guessing -->
+      <div>
+        <label for="guessLetter">Your Guess:</label>
+        <input type="text" id="guessLetter" maxlength="1" oninput="validateInput(this)">
+        <button onclick="makeGuess()">Guess</button>
+     </div>
+    </div>
+
+  <script src="script_hangman.js"></script>
+</body>
+</html>
