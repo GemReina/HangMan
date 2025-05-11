@@ -1,6 +1,6 @@
 # Hangman
 
-Welcome to the Hangman Game! This is a simple web-based Hangman game where players can guess words and save the hangman from being hanged.
+This is a simple web-based Hangman game where players can guess words and save the hangman from being hanged.
 
 ## How to Play
 
